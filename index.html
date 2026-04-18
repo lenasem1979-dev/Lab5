@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Лабораторна 5</title>
+  <style>
+    table, td, th {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+    th {
+      background: gray;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Користувачі</h2>
+
+<table id="userTable">
+  <tr>
+    <th>№</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Tom</td>
+    <td>Hank</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Bruce</td>
+    <td>Willis</td>
+  </tr>
+</table>
+
+<br>
+
+<label>FirstName:</label><br>
+<input type="text" id="firstName"><br><br>
+
+<label>LastName:</label><br>
+<input type="text" id="lastName"><br><br>
+
+<button onclick="addUser()">Add</button>
+
+<script>
+  function addUser() {
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
+
+    if (firstName === "" || lastName === "") {
+      alert("Заповни всі поля!");
+      return;
+    }
+
+    let table = document.getElementById("userTable");
+    let rowCount = table.rows.length;
+
+    let newRow = table.insertRow();
+
+    let cell1 = newRow.insertCell(0);
+    let cell2 = newRow.insertCell(1);
+    let cell3 = newRow.insertCell(2);
+
+    cell1.innerHTML = rowCount;
+    cell2.innerHTML = firstName;
+    cell3.innerHTML = lastName;
+
+    document.getElementById("firstName").value = "";
+    document.getElementById("lastName").value = "";
+  }
+</script>
+
+</body>
+</html>
+
