@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Форум</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        #form {
+            margin-bottom: 20px;
+        }
+
+        input, textarea {
+            display: block;
+            margin-bottom: 10px;
+            width: 300px;
+            padding: 5px;
+        }
+
+        .message {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        .author {
+            font-weight: bold;
+        }
+
+        .date {
+            color: gray;
+        }
+
+        .text {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="form">
+    <input type="text" id="name" placeholder="Ваше ім'я">
+    <textarea id="message" placeholder="Ваше повідомлення"></textarea>
+    <button id="addBtn">Додати</button>
+</div>
+
+<div id="messages"></div>
+
+<script src="task8.js"></script>
+
+</body>
+</html>
