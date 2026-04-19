@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 7</title>
+
+    <style>
+        #container {
+            width: 500px;
+            height: 300px;
+            border: 2px solid black;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            cursor: grab;
+        }
+
+        .red { background: red; top: 20px; left: 20px; }
+        .blue { background: blue; top: 100px; left: 100px; }
+        .green { background: green; top: 200px; left: 200px; }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <div class="box red"></div>
+    <div class="box blue"></div>
+    <div class="box green"></div>
+</div>
+
+<script src="task7.js"></script>
+
+</body>
+</html>
